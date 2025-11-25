@@ -34,3 +34,14 @@ nav{
     gap: 50px;
     font-size: 18px;
 }
+
+/* Main Content Section */
+
+main{
+    padding: 20px 20px;
+}
+
+.blog-main-banner{
+    max-width: 100%;
+    border-radius: 5px;
+}

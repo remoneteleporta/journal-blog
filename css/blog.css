@@ -1,7 +1,6 @@
 body{
 margin: 0;
 font-family: "Source Sans 3", sans-serif;
-color: #0E0E0E;
 }
 
 /* Top Nav */
@@ -44,4 +43,22 @@ main{
 .blog-main-banner{
     max-width: 100%;
     border-radius: 5px;
+}
+
+/* Recent Posts */
+
+aside{
+    text-align: center;
+}
+
+/* Footer */
+footer{
+    background-color: #202020;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+footer p{
+    margin: 0;
 }

@@ -1,6 +1,7 @@
 body{
 margin: 0;
 font-family: "Source Sans 3", sans-serif;
+height: 100vh;
 }
 
 /* Top Nav */
@@ -36,19 +37,47 @@ nav{
 
 /* Main Content Section */
 
-main{
+main, #recent-posts{
     padding: 20px 20px;
 }
 
-.blog-main-banner{
+.blog-main-banner, .recent-post-carousel img{
     max-width: 100%;
     border-radius: 5px;
 }
 
 /* Recent Posts */
 
-aside{
+aside h3{
     text-align: center;
+    margin: 1px;
+}
+
+.recent-post-carousel{
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+#recent-posts a{
+    text-decoration: none;
+    color: #0E0E0E;
+}
+
+.recent-post-carousel h4, p{
+    margin: 5px 0;
+}
+
+.recent-post-carousel time{
+    font-size: 14px;
+}
+
+.recent-post-carousel h4{
+    font-size: 20px;
+}
+
+.recent-post-carousel p{
+    color: #505050;
 }
 
 /* Footer */

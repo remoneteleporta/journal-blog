@@ -41,9 +41,17 @@ main, #recent-posts{
     padding: 20px 20px;
 }
 
-.blog-main-banner, .recent-post-carousel img{
-    max-width: 100%;
-    border-radius: 5px;
+#author-img{
+width: 180px;
+height: 180px;
+border-radius: 50%;
+display: block;
+margin: auto;
+}
+
+h1{
+    font-size: 28px;
+    line-height: 34px;
 }
 
 /* Recent Posts */
@@ -57,6 +65,11 @@ aside h3{
     text-align: left;
     cursor: pointer;
     margin-bottom: 35px;
+}
+
+.recent-post-carousel img{
+    max-width: 100%;
+    border-radius: 5px;
 }
 
 #recent-posts a{

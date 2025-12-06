@@ -46,6 +46,19 @@ main, #recent-posts{
     border-radius: 5px;
 }
 
+h1{
+    font-size: 28px;
+    line-height: 34px;
+}
+
+main h2{
+     font-size: 20px;
+}
+
+main p{
+    padding-bottom: 10px;
+}
+
 /* Recent Posts */
 
 aside h3{

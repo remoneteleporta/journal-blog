@@ -54,11 +54,19 @@ h1{
     line-height: 34px;
 }
 
+main h2{
+     font-size: 20px;
+}
+
+main p{
+    padding-bottom: 10px;
+}
+
 /* Recent Posts */
 
 aside h3{
     text-align: center;
-    margin: 1px;
+    margin: 0;
 }
 
 .recent-post-carousel{
@@ -103,4 +111,39 @@ footer{
 }
 footer p{
     margin: 0;
+}
+
+
+@media (max-width: 550px) {
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+    }  
+}
+
+@media (min-width: 550px) {
+
+    main, aside {
+        background-color: #ECECEC;
+    }
+    
+    #author{
+        display: grid;
+        grid-template: repeat(3, 5em)/repeat(3, 1fr);
+    }
+
+    #author div{
+        grid-column: span 2;
+    }
+
+    #recent-posts{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: .8em;
+    }
+    
+    .recent-post-carousel{
+        grid-column: span 1;
+    }
 }

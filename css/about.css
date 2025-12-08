@@ -1,7 +1,11 @@
-body{
+html, body{
 margin: 0;
 font-family: "Source Sans 3", sans-serif;
 height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Top Nav */
@@ -15,51 +19,57 @@ nav, nav a, #nav-links{
 }
 
 nav{
-    padding: 10px 20px 20px;
+    padding: 0.625em 1.25em 0.5em;
+    background-color: white;
 }
 
 .logo{
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 800;
 }
 
 #logo-icon{
-    width: 32px;
-    height: 32px;
+    width: 2em;
+    height: 2em;
 }
 
 #nav-links{
-    padding: 0 20px;
-    gap: 50px;
-    font-size: 18px;
+    padding: 0 1.25em;
+    gap: 3em;
+    font-size: 1.125em;
 }
 
 /* Main Content Section */
 
 main, #recent-posts{
-    padding: 20px 20px;
+    padding: 1.25em 1.25em;
 }
 
 #author-img{
-width: 180px;
-height: 180px;
-border-radius: 50%;
+width: 11.25em;
+height: 11.25em;
+border-radius: 55%;
 display: block;
 margin: auto;
 }
 
 h1{
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 1.5em;
+    line-height: 1.125em;
 }
 
 main h2{
-     font-size: 20px;
+     font-size: 1.25em;
 }
 
 main p{
-    padding-bottom: 10px;
+    font-size: 1.02em;
+    line-height: 1.5em;
+}
+
+main p{
+    padding-bottom: 0.5em;
 }
 
 /* Recent Posts */
@@ -69,10 +79,17 @@ aside h3{
     margin: 0;
 }
 
+#recent-posts{
+    display: grid;
+    grid-column: 1fr ;
+    gap: 1.5em;
+    padding: 1.5em;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
+}
+
 .recent-post-carousel{
     text-align: left;
     cursor: pointer;
-    margin-bottom: 35px;
 }
 
 .recent-post-carousel img{
@@ -86,15 +103,15 @@ aside h3{
 }
 
 .recent-post-carousel h4, p{
-    margin: 5px 0;
+    margin: 0.3125em 0;
 }
 
 .recent-post-carousel time{
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 .recent-post-carousel h4{
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .recent-post-carousel p{
@@ -106,8 +123,8 @@ footer{
     background-color: #202020;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
+    padding: 1.25em;
+    font-size: 0.75em;
 }
 footer p{
     margin: 0;
@@ -124,26 +141,56 @@ footer p{
 
 @media (min-width: 550px) {
 
-    main, aside {
+    body{
         background-color: #ECECEC;
     }
     
     #author{
+        margin: 3em 1em;
+    }
+    
+    #author{
         display: grid;
-        grid-template: repeat(3, 5em)/repeat(3, 1fr);
+        grid-template: repeat(2,7em)/15em 1fr 1fr;
     }
 
     #author div{
         grid-column: span 2;
     }
 
+    .recent-post-carousel img{
+        height: 8em;
+       }
+
     #recent-posts{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        column-gap: .8em;
+        column-gap: 2em;
+        place-items: center;
     }
     
     .recent-post-carousel{
         grid-column: span 1;
     }
+
+    @media (min-width: 799px){
+
+       h1{
+        font-size: 2.5em;
+       }
+
+       #author p{
+        font-size: 1.125em;
+       }
+
+       #about-author-section{
+          margin: 0 8em;
+       }
+
+       .recent-post-carousel img{
+        height: 20.125rem;
+       }
+
+    }
+
 }

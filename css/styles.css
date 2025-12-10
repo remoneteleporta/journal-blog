@@ -15,7 +15,8 @@ nav, nav a, #nav-links{
 }
 
 nav{
-    padding: 10px 20px 20px;
+    padding: 0.625em 1.25em 0.5em;
+    background-color: white;
 }
 
 .logo{
@@ -37,6 +38,8 @@ nav{
 
 h1{
     text-align: center;
+    margin: 0;
+    font-size: 1.125em;
 }
 
 /* Hero Section */
@@ -77,10 +80,16 @@ h1{
 
 /* Recent Posts */
 
+#recent-posts{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
+    padding: 1.5em;
+}
+
 .recent-post-carousel{
     text-align: left;
     cursor: pointer;
-    margin-bottom: 35px;
 }
 
 .recent-post-carousel img{
@@ -124,10 +133,34 @@ footer p{
 
 /* Media Queries */
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
 
     main {
-        background-color: #ECECEC;
+        background-color: #FAFAFA;
+    }
+
+    #recent-posts
+    {
+    grid-template-columns: repeat(3,auto);
+    margin-top: 0.5em;
+    }
+
+    #hero-section{
+        width: 100vw;
+        height: 80vh;
+    }
+
+    #hero-section div{
+     padding: 50px;
+     font-size: 1em;
+    }
+
+    h1{
+        font-size: 1.5em;
+    }
+
+    #hero-section h2{
+        font-size: 3em;
     }
     
 }

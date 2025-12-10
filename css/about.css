@@ -80,10 +80,9 @@ aside h3{
 
 #recent-posts{
     display: grid;
-    grid-column: 1fr ;
-    gap: 1.5em;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5em;
     padding: 1.5em;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))
 }
 
 .recent-post-carousel{
@@ -130,10 +129,10 @@ footer p{
 }
 
 
-@media (max-width: 550px) {
+@media (min-width: 768px){
+    #recent-posts
+    {
+    grid-template-columns: repeat(3,auto);
+    }
 
-    body{
-        display: grid;
-        grid-template-columns: 1fr;
-    }  
 }

@@ -1,7 +1,12 @@
-body{
+html, body{
 margin: 0;
+padding: 0;
 font-family: "Source Sans 3", sans-serif;
 height: 100vh;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Top Nav */
@@ -21,19 +26,18 @@ nav{
 
 .logo{
     font-family: "Roboto", sans-serif;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 800;
 }
 
 #logo-icon{
-    width: 32px;
-    height: 32px;
+    width: 2em;
+    height: 2em;
 }
 
 #nav-links{
-    padding: 0 20px;
-    gap: 50px;
-    font-size: 18px;
+    gap: 2em;
+    font-size: 1.125em;
 }
 
 h1{
@@ -51,31 +55,31 @@ h1{
     background-position: center;
     display: table-cell;
     vertical-align: bottom;
-    padding: 15px;
+    padding: 0.9375em;
 }
 
 #hero-post a{
     color: white;
     text-decoration: none;
-    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0.125em 0.125em 0.0625em rgba(0, 0, 0, 0.5);
 }
 
 #hero-post h2, p{
-    margin: 5px 0;
+    margin: 0.3125em 0;
 }
 
 #hero-post time{
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 #hero-post h2{
-    font-size: 30px;
+    font-size: 1.875em;
 }
 
 /* Recent Posts Section */
 
 #recent-posts{
-    padding: 20px 20px;
+    padding: 1.25em 1.25em;
 }
 
 /* Recent Posts */
@@ -94,7 +98,7 @@ h1{
 
 .recent-post-carousel img{
     max-width: 100%;
-    border-radius: 5px;
+    border-radius: 0.3125em;
 }
 
 #recent-posts a{
@@ -103,15 +107,15 @@ h1{
 }
 
 .recent-post-carousel h3, p{
-    margin: 5px 0;
+    margin: 0.3125em 0;
 }
 
 .recent-post-carousel time{
-    font-size: 14px;
+    font-size: 0.875em;
 }
 
 .recent-post-carousel h4{
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .recent-post-carousel p{
@@ -123,8 +127,8 @@ footer{
     background-color: #202020;
     color: white;
     text-align: center;
-    padding: 20px;
-    font-size: 12px;
+    padding: 1.25em;
+    font-size: 0.75em;
 }
 footer p{
     margin: 0;
@@ -151,7 +155,7 @@ footer p{
     }
 
     #hero-section div{
-     padding: 50px;
+     padding: 3.125em;
      font-size: 1em;
     }
 

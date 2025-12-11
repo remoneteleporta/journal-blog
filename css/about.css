@@ -2,8 +2,6 @@ html, body{
 margin: 0;
 font-family: "Source Sans 3", sans-serif;
 height: 100vh;
-display: grid;
-grid-template: repeat(3,1fr)/1fr;
 }
 
 *, *::before, *::after {
@@ -37,15 +35,14 @@ nav{
 }
 
 #nav-links{
-    padding: 0 1.25em;
-    gap: 3em;
+    gap: 2em;
     font-size: 1.125em;
 }
 
 /* Main Content Section */
 
 main{
-    padding: 1.75em;
+    padding: 1.5em;
 }
 
 #author-img{
@@ -66,7 +63,7 @@ main h2{
 }
 
 p{
-    font-size: 1.02em;
+    font-size: 1.1em;
     line-height: 1.5em;
     padding-bottom: 0.5em;
 }

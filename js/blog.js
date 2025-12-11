@@ -7,7 +7,7 @@ const currentSlug = cleanSlug.endsWith('/') ? cleanSlug : `${cleanSlug}/`
 
 const currentBlogIndex = bloglist.findIndex(blog => blog.url === currentSlug)
 
-recentPost.innerHTML = bloglist.slice(currentBlogIndex + 1, currentBlogIndex + 4).map(blogs =>{
+recentPost.innerHTML = bloglist.slice(currentBlogIndex - 1, currentBlogIndex + 2).map(blogs =>{
 return `<div class="recent-post-carousel">
 <a href="${blogs.url}">
 <img src="${blogs.img}">

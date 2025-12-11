@@ -122,6 +122,17 @@ h1{
     color: #505050;
 }
 
+#v-more-btn{
+    background-color: inherit;
+    display: block;
+    margin: 0 auto 1em;
+    text-decoration: underline;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* Footer */
 footer{
     background-color: #202020;
@@ -139,7 +150,7 @@ footer p{
 
 @media (min-width: 768px) {
 
-    main {
+    body {
         background-color: #FAFAFA;
     }
 

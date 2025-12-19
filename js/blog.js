@@ -7,13 +7,33 @@ const currentSlug = cleanSlug.endsWith('/') ? cleanSlug : `${cleanSlug}/`
 
 const currentBlogIndex = bloglist.findIndex(blog => blog.url === currentSlug)
 
-recentPost.innerHTML = bloglist.slice(currentBlogIndex - 1, currentBlogIndex + 2).map(blogs =>{
-return `<div class="recent-post-carousel">
-<a href="${blogs.url}">
-<img src="${blogs.img}">
-<time>${blogs.date}</time>
-<h4>${blogs.title}</h4>
-<p>${blogs.desc}</p>
-</a>
-</div>`
-}).join("")
+let start, end;
+const totalBlogs = bloglist.length;
+const lastIndex = totalBlogs - 1;
+
+if (currentBlogIndex === 0) {
+  start = 0;
+  end = Math.min(3, totalBlogs);
+
+} else if (currentBlogIndex === lastIndex) {
+  start = Math.max(totalBlogs - 3, 0);
+  end = totalBlogs;
+
+} else {
+  start = currentBlogIndex - 1;
+  end = currentBlogIndex + 2;
+}
+
+recentPost.innerHTML = bloglist
+  .slice(start, end)
+  .map(blogs => `
+    <div class="recent-post-carousel">
+      <a href="${blogs.url}">
+        <img src="${blogs.img}">
+        <time>${blogs.date}</time>
+        <h4>${blogs.title}</h4>
+        <p>${blogs.desc}</p>
+      </a>
+    </div>
+  `)
+  .join("");

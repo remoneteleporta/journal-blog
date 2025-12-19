@@ -133,7 +133,7 @@ footer p{
 
     main{
         display: grid;
-        grid-template: auto/repeat(19,1fr);
+        grid-template: repeat(3, auto) 43em repeat(2, auto) / repeat(19, 1fr);
     }
 
     main, aside{
@@ -155,6 +155,7 @@ footer p{
     .blog-main-banner{
         grid-column: 1/20;
         padding: 0 2em;
+        height: 100%;
     }
 
     time{

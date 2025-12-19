@@ -16,7 +16,8 @@ heroSection.innerHTML = `
 </a>
 </div>`
 
-recentPost.innerHTML = bloglist.slice(0, 6).map(blogs =>{
+function renderPosts(start, end){
+recentPost.innerHTML = bloglist.slice(start, end).map(blogs =>{
 return `<div class="recent-post-carousel">
 <a href="${blogs.url}">
 <img src="${blogs.img}">
@@ -26,16 +27,11 @@ return `<div class="recent-post-carousel">
 </a>
 </div>`
 }).join("")
+}
+
+renderPosts(0,6)
 
 vMoreBtn.addEventListener("click", ()=>{
-    vMoreBtn.style.display = "none"
-recentPost.innerHTML = bloglist.slice(0, bloglist.length - 1).map(blogs =>{
-return `<div class="recent-post-carousel">
-<a href="${blogs.url}">
-<img src="${blogs.img}">
-<time>${blogs.date}</time>
-<h3>${blogs.title}</h3>
-<p>${blogs.desc}</p>
-</a>
-</div>`
-}).join("")})
+vMoreBtn.style.display = "none"
+renderPosts(0, bloglist.length - 1)
+})

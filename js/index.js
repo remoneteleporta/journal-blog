@@ -3,6 +3,10 @@ const recentPost = document.getElementById("recent-posts")
 const heroSection = document.getElementById("hero-section")
 const vMoreBtn = document.getElementById("v-more-btn")
 
+const hamMenuBtn = document.getElementById("menu-btn")
+const navLinks = document.getElementById("nav-links")
+const closeMenuBtn = document.getElementById("close-menu-btn")
+
 const latestBlogIndex = bloglist.length - 1
 
 heroSection.style.backgroundImage = `url(${bloglist[latestBlogIndex].img})`
@@ -34,4 +38,13 @@ renderPosts(0,6)
 vMoreBtn.addEventListener("click", ()=>{
 vMoreBtn.style.display = "none"
 renderPosts(0, bloglist.length - 1)
+})
+
+
+hamMenuBtn.addEventListener("click", ()=>{
+     navLinks.style.display = "flex";
+})
+
+closeMenuBtn.addEventListener("click",()=>{
+    navLinks.style.display = "none";
 })

@@ -7,6 +7,10 @@ const currentSlug = cleanSlug.endsWith('/') ? cleanSlug : `${cleanSlug}/`
 
 const currentBlogIndex = bloglist.findIndex(blog => blog.url === currentSlug)
 
+const hamMenuBtn = document.getElementById("menu-btn")
+const navLinks = document.getElementById("nav-links")
+const closeMenuBtn = document.getElementById("close-menu-btn")
+
 let start, end;
 const totalBlogs = bloglist.length;
 const lastIndex = totalBlogs - 1;
@@ -37,3 +41,12 @@ recentPost.innerHTML = bloglist
     </div>
   `)
   .join("");
+
+
+hamMenuBtn.addEventListener("click", ()=>{
+     navLinks.style.display = "flex";
+})
+
+closeMenuBtn.addEventListener("click",()=>{
+    navLinks.style.display = "none";
+})

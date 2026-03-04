@@ -29,9 +29,9 @@ export const bloglist = [
   },
   {
     "title": "Blog Four",
-    "img": "/blog/blog-4/stock-markets-must-be-abolished.jpg",
+    "img": "blog/abolish-stock-markets/stock-markets-must-be-abolished.jpg",
     "desc": "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
-    "url": "/blog/blog-4/",
+    "url": "/blog/abolish-stock-markets/",
     "date": "November 28, 2025"
   },
   {
